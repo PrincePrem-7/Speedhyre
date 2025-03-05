@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload CV</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h2>Upload Candidate CV</h2>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="cv">
+        <input type="submit" value="Upload">
+    </form>
+    <br>
+    <a href="{{ url_for('candidates') }}">View Candidates</a>
+</body>
+</html>

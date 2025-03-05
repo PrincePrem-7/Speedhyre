@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Filtered Candidates</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h2>Filtered Candidates</h2>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Location</th>
+        </tr>
+        {% for candidate in candidates %}
+        <tr>
+            <td>{{ candidate[1] }} {{ candidate[2] }}</td>
+            <td>{{ candidate[3] }}</td>
+            <td>{{ candidate[4] }}</td>
+            <td>{{ candidate[5] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="{{ url_for('index') }}">Upload More</a>
+</body>
+</html>
